@@ -8,6 +8,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1084035583928541');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1084035583928541&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
   <style>
       * {
           margin: 0;
@@ -450,7 +477,7 @@
               <p class="price-small">Acesso imediato após a compra</p>
           </div>
           
-          <button class="cta-button">
+          <button class="cta-button" data-event="hero-cta">
               <i class="fas fa-moon"></i>
               QUERO DORMIR HOJE MESMO
           </button>
@@ -586,7 +613,7 @@
               <p class="price-small">Pague uma vez, durma bem para sempre</p>
           </div>
           
-          <button class="cta-button">
+          <button class="cta-button" data-event="final-cta">
               <i class="fas fa-check-circle"></i>
               SIM, QUERO DORMIR BEM HOJE
           </button>
@@ -602,13 +629,139 @@
   </footer>
 
   <script>
-      // Funcionalidade básica dos botões CTA
-      document.querySelectorAll('.cta-button').forEach(button => {
-          button.addEventListener('click', function() {
-              // Integração com Kwify vai aqui
-              alert('Redirecionamento para checkout - Kwify será integrado aqui');
-              console.log('CTA clicado:', this.textContent.trim());
+      // Captura e armazenamento de UTMs
+      function captureUTMs() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const utmParams = {};
+          
+          // Lista de UTMs para capturar
+          const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+          
+          utmKeys.forEach(key => {
+              const value = urlParams.get(key);
+              if (value) {
+                  utmParams[key] = value;
+                  // Armazena no localStorage para persistir durante a sessão
+                  localStorage.setItem(key, value);
+              }
           });
+          
+          return utmParams;
+      }
+
+      // Função para obter UTMs (da URL atual ou localStorage)
+      function getUTMs() {
+          const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+          const utms = {};
+          
+          utmKeys.forEach(key => {
+              utms[key] = localStorage.getItem(key) || '';
+          });
+          
+          return utms;
+      }
+
+      // Função para construir URL com UTMs
+      function buildCheckoutURL(baseURL) {
+          const utms = getUTMs();
+          const url = new URL(baseURL);
+          
+          Object.keys(utms).forEach(key => {
+              if (utms[key]) {
+                  url.searchParams.set(key, utms[key]);
+              }
+          });
+          
+          return url.toString();
+      }
+
+      // Eventos de tracking
+      function trackEvent(eventName, properties = {}) {
+          // Facebook Pixel
+          if (typeof fbq !== 'undefined') {
+              fbq('track', eventName, properties);
+          }
+          
+          // Google Analytics
+          if (typeof gtag !== 'undefined') {
+              gtag('event', eventName, properties);
+          }
+          
+          // Log para debug
+          console.log('Event tracked:', eventName, properties);
+      }
+
+      // Inicialização
+      document.addEventListener('DOMContentLoaded', function() {
+          // Captura UTMs na chegada à página
+          const utms = captureUTMs();
+          console.log('UTMs captured:', utms);
+          
+          // Track page view com UTMs
+          trackEvent('PageView', utms);
+          
+          // Event listeners para botões CTA
+          document.querySelectorAll('.cta-button').forEach(button => {
+              button.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  
+                  const eventType = this.getAttribute('data-event') || 'cta-click';
+                  const buttonText = this.textContent.trim();
+                  
+                  // Tracking do clique
+                  trackEvent('AddToCart', {
+                      content_name: 'Durma em 8 Minutos',
+                      content_category: 'Digital Product',
+                      value: 19.90,
+                      currency: 'BRL',
+                      button_text: buttonText,
+                      button_location: eventType,
+                      ...getUTMs()
+                  });
+                  
+                  // URL do checkout Kwify (substitua pela URL real)
+                  const checkoutURL = 'https://checkout.kwify.com/SEUCHECKOUT';
+                  const finalURL = buildCheckoutURL(checkoutURL);
+                  
+                  // Redirect para checkout
+                  setTimeout(() => {
+                      window.location.href = finalURL;
+                  }, 300); // Delay para garantir que o tracking seja enviado
+              });
+          });
+          
+          // Tracking de scroll (25%, 50%, 75%, 100%)
+          let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+          
+          window.addEventListener('scroll', function() {
+              const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+              
+              Object.keys(scrollTracked).forEach(threshold => {
+                  if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                      scrollTracked[threshold] = true;
+                      trackEvent('scroll', {
+                          scroll_depth: threshold + '%',
+                          ...getUTMs()
+                      });
+                  }
+              });
+          });
+          
+          // Tracking de tempo na página (30s, 60s, 120s, 300s)
+          const timeThresholds = [30, 60, 120, 300];
+          timeThresholds.forEach(seconds => {
+              setTimeout(() => {
+                  trackEvent('time_on_page', {
+                      time_threshold: seconds + 's',
+                      ...getUTMs()
+                  });
+              }, seconds * 1000);
+          });
+      });
+
+      // Tracking de saída da página
+      window.addEventListener('beforeunload', function() {
+          trackEvent('page_exit', getUTMs());
       });
   </script>
 </body>
