@@ -1,1939 +1,615 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Durma Profundo em 8 Minutos - Método Científico de Hipnoterapia</title>
-   <meta name="description" content="Descubra o protocolo revolucionário de hipnoterapia que te faz adormecer em apenas 8 minutos. Baseado em ciência e aprovado por especialistas.">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   
-   <style>
-       /* Reset and Base Styles */
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-       }
-
-       body {
-           font-family: 'Inter', sans-serif;
-           line-height: 1.6;
-           color: #2c3e50;
-           background-color: #f8fafc;
-       }
-
-       .container {
-           max-width: 1200px;
-           margin: 0 auto;
-           padding: 0 20px;
-       }
-
-       /* Typography */
-       h1, h2, h3, h4, h5, h6 {
-           font-weight: 600;
-           line-height: 1.2;
-           margin-bottom: 1rem;
-       }
-
-       p {
-           margin-bottom: 1rem;
-       }
-
-       /* Hero Section */
-       .hero {
-           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-           color: white;
-           padding: 80px 0;
-           min-height: 100vh;
-           display: flex;
-           align-items: center;
-           position: relative;
-           overflow: hidden;
-       }
-
-       .hero::before {
-           content: '';
-           position: absolute;
-           top: 0;
-           left: 0;
-           right: 0;
-           bottom: 0;
-           background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
-           opacity: 0.3;
-       }
-
-       .hero-content {
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           gap: 60px;
-           align-items: center;
-           position: relative;
-           z-index: 1;
-       }
-
-       .hero-title {
-           font-size: 3.5rem;
-           font-weight: 800;
-           margin-bottom: 1.5rem;
-           line-height: 1.1;
-       }
-
-       .highlight {
-           background: linear-gradient(45deg, #ffd700, #ffed4e);
-           -webkit-background-clip: text;
-           -webkit-text-fill-color: transparent;
-           background-clip: text;
-           text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-       }
-
-       .hero-subtitle {
-           font-size: 1.5rem;
-           font-weight: 500;
-           margin-bottom: 1.5rem;
-           opacity: 0.9;
-       }
-
-       .hero-description {
-           font-size: 1.1rem;
-           margin-bottom: 2rem;
-           opacity: 0.8;
-           line-height: 1.7;
-       }
-
-       .audio-section {
-           background: rgba(255, 255, 255, 0.1);
-           padding: 20px;
-           border-radius: 15px;
-           margin-bottom: 2rem;
-           backdrop-filter: blur(10px);
-           border: 1px solid rgba(255, 255, 255, 0.2);
-       }
-
-       .audio-section i {
-           font-size: 1.5rem;
-           margin-right: 10px;
-           color: #ffd700;
-       }
-
-       .audio-link {
-           color: white;
-           text-decoration: none;
-           font-weight: 500;
-       }
-
-       .audio-link:hover {
-           text-decoration: underline;
-       }
-
-       .audio-section small {
-           display: block;
-           margin-top: 5px;
-           opacity: 0.7;
-           font-size: 0.9rem;
-       }
-
-       .cta-section {
-           margin-top: 2rem;
-       }
-
-       .cta-button {
-           background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-           color: white;
-           border: none;
-           padding: 18px 40px;
-           font-size: 1.1rem;
-           font-weight: 600;
-           border-radius: 50px;
-           cursor: pointer;
-           transition: all 0.3s ease;
-           box-shadow: 0 10px 30px rgba(238, 90, 36, 0.3);
-           text-transform: uppercase;
-           letter-spacing: 0.5px;
-       }
-
-       .cta-button:hover {
-           transform: translateY(-3px);
-           box-shadow: 0 15px 40px rgba(238, 90, 36, 0.4);
-       }
-
-       .cta-button.large {
-           padding: 22px 50px;
-           font-size: 1.2rem;
-       }
-
-       .cta-button i {
-           margin-right: 10px;
-       }
-
-       .cta-note {
-           font-size: 0.9rem;
-           opacity: 0.7;
-           margin-top: 10px;
-           text-align: center;
-       }
-
-       .hero-image {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-
-       .image-placeholder {
-           background: rgba(255, 255, 255, 0.1);
-           border: 2px dashed rgba(255, 255, 255, 0.3);
-           border-radius: 20px;
-           padding: 60px 40px;
-           text-align: center;
-           backdrop-filter: blur(10px);
-           width: 100%;
-           max-width: 400px;
-       }
-
-       .image-placeholder i {
-           font-size: 4rem;
-           margin-bottom: 20px;
-           opacity: 0.7;
-       }
-
-       .image-placeholder p {
-           font-weight: 500;
-           margin-bottom: 10px;
-       }
-
-       .image-placeholder small {
-           opacity: 0.6;
-           font-size: 0.8rem;
-       }
-
-       .image-placeholder.small {
-           padding: 30px 20px;
-           max-width: 200px;
-       }
-
-       .image-placeholder.small i {
-           font-size: 2rem;
-           margin-bottom: 10px;
-       }
-
-       /* Section Styles */
-       section {
-           padding: 80px 0;
-       }
-
-       .section-title {
-           font-size: 2.5rem;
-           text-align: center;
-           margin-bottom: 3rem;
-           color: #2c3e50;
-       }
-
-       /* Problem Section */
-       .problem-section {
-           background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-           color: #2c3e50;
-       }
-
-       .problem-grid {
-           margin-bottom: 3rem;
-       }
-
-       .problem-item {
-           text-align: center;
-           margin-bottom: 2rem;
-       }
-
-       .problem-item i {
-           font-size: 4rem;
-           color: #e74c3c;
-           margin-bottom: 1rem;
-       }
-
-       .problem-item h3 {
-           font-size: 1.8rem;
-           color: #2c3e50;
-       }
-
-       .problem-intro {
-           font-size: 1.2rem;
-           text-align: center;
-           margin-bottom: 2rem;
-           font-weight: 500;
-       }
-
-       .problem-list {
-           max-width: 800px;
-           margin: 0 auto 2rem;
-       }
-
-       .problem-point {
-           display: flex;
-           align-items: center;
-           margin-bottom: 1rem;
-           padding: 15px;
-           background: rgba(255, 255, 255, 0.3);
-           border-radius: 10px;
-           backdrop-filter: blur(10px);
-       }
-
-       .problem-point i {
-           color: #e74c3c;
-           margin-right: 15px;
-           font-size: 1.2rem;
-       }
-
-       .problem-conclusion {
-           text-align: center;
-           font-size: 1.3rem;
-           margin-top: 2rem;
-       }
-
-       /* Solution Section */
-       .solution-section {
-           background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-       }
-
-       .solution-intro {
-           text-align: center;
-           font-size: 1.2rem;
-           margin-bottom: 3rem;
-           max-width: 800px;
-           margin-left: auto;
-           margin-right: auto;
-       }
-
-       .solution-grid {
-           display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-           gap: 40px;
-           margin-top: 3rem;
-       }
-
-       .solution-item {
-           background: white;
-           padding: 40px 30px;
-           border-radius: 20px;
-           text-align: center;
-           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease;
-       }
-
-       .solution-item:hover {
-           transform: translateY(-10px);
-       }
-
-       .solution-icon {
-           width: 80px;
-           height: 80px;
-           background: linear-gradient(45deg, #667eea, #764ba2);
-           border-radius: 50%;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           margin: 0 auto 20px;
-       }
-
-       .solution-icon i {
-           font-size: 2rem;
-           color: white;
-       }
-
-       .solution-item h3 {
-           font-size: 1.5rem;
-           margin-bottom: 1rem;
-           color: #2c3e50;
-       }
-
-       .solution-item p {
-           color: #666;
-           line-height: 1.7;
-       }
-
-       /* Benefits Section */
-       .benefits-section {
-           background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-       }
-
-       .benefits-grid {
-           display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-           gap: 30px;
-           margin-top: 3rem;
-       }
-
-       .benefit-item {
-           background: white;
-           padding: 30px;
-           border-radius: 15px;
-           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease;
-       }
-
-       .benefit-item:hover {
-           transform: translateY(-5px);
-       }
-
-       .benefit-icon {
-           width: 60px;
-           height: 60px;
-           background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-           border-radius: 50%;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           margin-bottom: 20px;
-       }
-
-       .benefit-icon i {
-           font-size: 1.5rem;
-           color: white;
-       }
-
-       .benefit-item h3 {
-           font-size: 1.3rem;
-           margin-bottom: 1rem;
-           color: #2c3e50;
-       }
-
-       .benefit-item p {
-           color: #666;
-           line-height: 1.6;
-       }
-
-       /* Authority Section */
-       .authority-section {
-           background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%);
-       }
-
-       .authority-content {
-           max-width: 1000px;
-           margin: 0 auto;
-       }
-
-       .authority-profile {
-           display: grid;
-           grid-template-columns: 300px 1fr;
-           gap: 40px;
-           margin-bottom: 3rem;
-           align-items: center;
-       }
-
-       .profile-image {
-           display: flex;
-           justify-content: center;
-       }
-
-       .profile-info h3 {
-           font-size: 2rem;
-           color: #2c3e50;
-           margin-bottom: 1.5rem;
-       }
-
-       .credentials {
-           list-style: none;
-       }
-
-       .credentials li {
-           display: flex;
-           align-items: center;
-           margin-bottom: 1rem;
-           font-size: 1.1rem;
-       }
-
-       .credentials i {
-           color: #27ae60;
-           margin-right: 15px;
-           font-size: 1.2rem;
-       }
-
-       .science-backing {
-           background: white;
-           padding: 40px;
-           border-radius: 20px;
-           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-       }
-
-       .science-backing h3 {
-           font-size: 1.8rem;
-           margin-bottom: 1rem;
-           color: #2c3e50;
-       }
-
-       .institutions {
-           margin-top: 2rem;
-       }
-
-       .institution {
-           display: flex;
-           align-items: center;
-           margin-bottom: 1rem;
-           padding: 15px;
-           background: #f8f9fa;
-           border-radius: 10px;
-       }
-
-       .institution i {
-           color: #3498db;
-           margin-right: 15px;
-           font-size: 1.3rem;
-       }
-
-       .institution strong {
-           margin-right: 10px;
-       }
-
-       .institution span {
-           color: #666;
-       }
-
-       /* Includes Section */
-       .includes-section {
-           background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-       }
-
-       .includes-grid {
-           display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-           gap: 40px;
-           margin-bottom: 3rem;
-       }
-
-       .include-item {
-           background: white;
-           padding: 40px 30px;
-           border-radius: 20px;
-           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-       }
-
-       .include-icon {
-           width: 80px;
-           height: 80px;
-           background: linear-gradient(45deg, #fdcb6e, #e17055);
-           border-radius: 50%;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           margin-bottom: 20px;
-       }
-
-       .include-icon i {
-           font-size: 2rem;
-           color: white;
-       }
-
-       .include-item h3 {
-           font-size: 1.4rem;
-           margin-bottom: 1.5rem;
-           color: #2c3e50;
-       }
-
-       .include-item ul {
-           list-style: none;
-       }
-
-       .include-item li {
-           margin-bottom: 0.8rem;
-           padding-left: 20px;
-           position: relative;
-           color: #666;
-       }
-
-       .include-item li::before {
-           content: '✓';
-           position: absolute;
-           left: 0;
-           color: #27ae60;
-           font-weight: bold;
-       }
-
-       .product-preview {
-           text-align: center;
-           margin-top: 3rem;
-       }
-
-       /* Urgency Section */
-       .urgency-section {
-           background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-           color: white;
-           text-align: center;
-       }
-
-       .urgency-content h2 {
-           font-size: 2.5rem;
-           margin-bottom: 1.5rem;
-       }
-
-       .urgency-content p {
-           font-size: 1.2rem;
-           margin-bottom: 1rem;
-       }
-
-       .urgency-warning {
-           font-size: 1.4rem;
-           background: rgba(255, 255, 255, 0.2);
-           padding: 20px;
-           border-radius: 15px;
-           margin-top: 2rem;
-       }
-
-       /* Guarantee Section */
-       .guarantee-section {
-           background: linear-gradient(135deg, #d1f2eb 0%, #a8e6cf 100%);
-       }
-
-       .guarantee-content {
-           display: grid;
-           grid-template-columns: 200px 1fr;
-           gap: 40px;
-           align-items: center;
-           max-width: 1000px;
-           margin: 0 auto;
-       }
-
-       .guarantee-badge {
-           text-align: center;
-       }
-
-       .guarantee-badge i {
-           font-size: 4rem;
-           color: #27ae60;
-           margin-bottom: 20px;
-       }
-
-       .guarantee-text h2 {
-           font-size: 2rem;
-           color: #2c3e50;
-           margin-bottom: 1rem;
-       }
-
-       .guarantee-promise {
-           font-size: 1.3rem;
-           color: #27ae60;
-           font-weight: 600;
-           margin: 1.5rem 0;
-       }
-
-       .guarantee-terms {
-           font-style: italic;
-           color: #666;
-       }
-
-       /* Pricing Section */
-       .pricing-section {
-           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-           color: white;
-           text-align: center;
-       }
-
-       .pricing-card {
-           background: rgba(255, 255, 255, 0.1);
-           padding: 60px 40px;
-           border-radius: 30px;
-           max-width: 500px;
-           margin: 0 auto;
-           backdrop-filter: blur(10px);
-           border: 1px solid rgba(255, 255, 255, 0.2);
-       }
-
-       .price-comparison {
-           margin-bottom: 2rem;
-       }
-
-       .old-price {
-           font-size: 1.5rem;
-           text-decoration: line-through;
-           opacity: 0.7;
-           display: block;
-       }
-
-       .price-label {
-           font-size: 1.2rem;
-           margin-top: 10px;
-           display: block;
-       }
-
-       .current-price {
-           font-size: 4rem;
-           font-weight: 800;
-           margin: 2rem 0;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-       }
-
-       .price-currency {
-           font-size: 2rem;
-           margin-right: 5px;
-       }
-
-       .price-cents {
-           font-size: 2rem;
-       }
-
-       .payment-options {
-           font-size: 1.2rem;
-           margin-bottom: 0.5rem;
-       }
-
-       .installments {
-           font-size: 1.1rem;
-           opacity: 0.8;
-           margin-bottom: 2rem;
-       }
-
-       /* FAQ Section */
-       .faq-section {
-           background: #f8f9fa;
-       }
-
-       .faq-list {
-           max-width: 800px;
-           margin: 0 auto;
-       }
-
-       .faq-item {
-           background: white;
-           margin-bottom: 20px;
-           border-radius: 15px;
-           overflow: hidden;
-           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-       }
-
-       .faq-question {
-           padding: 25px 30px;
-           cursor: pointer;
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           background: linear-gradient(45deg, #667eea, #764ba2);
-           color: white;
-           transition: background 0.3s ease;
-       }
-
-       .faq-question:hover {
-           background: linear-gradient(45deg, #5a6fd8, #6a4190);
-       }
-
-       .faq-question h3 {
-           font-size: 1.2rem;
-           margin: 0;
-       }
-
-       .faq-question i {
-           transition: transform 0.3s ease;
-       }
-
-       .faq-item.active .faq-question i {
-           transform: rotate(180deg);
-       }
-
-       .faq-answer {
-           padding: 0 30px;
-           max-height: 0;
-           overflow: hidden;
-           transition: all 0.3s ease;
-       }
-
-       .faq-item.active .faq-answer {
-           padding: 25px 30px;
-           max-height: 200px;
-       }
-
-       .faq-answer p {
-           color: #666;
-           line-height: 1.7;
-           margin: 0;
-       }
-
-       /* Final CTA Section */
-       .final-cta-section {
-           background: linear-gradient(45deg, #2c3e50, #34495e);
-           color: white;
-           text-align: center;
-       }
-
-       .final-cta-content h2 {
-           font-size: 2.5rem;
-           margin-bottom: 2rem;
-       }
-
-       .consequences-list {
-           list-style: none;
-           max-width: 600px;
-           margin: 2rem auto;
-           text-align: left;
-       }
-
-       .consequences-list li {
-           display: flex;
-           align-items: center;
-           margin-bottom: 1rem;
-           font-size: 1.1rem;
-       }
-
-       .consequences-list i {
-           color: #e74c3c;
-           margin-right: 15px;
-           font-size: 1.2rem;
-       }
-
-       .final-message {
-           font-size: 1.5rem;
-           margin: 2rem 0;
-           font-weight: 600;
-       }
-
-       /* Footer */
-       .footer {
-           background: #2c3e50;
-           color: white;
-           padding: 40px 0;
-       }
-
-       .footer-content {
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           gap: 40px;
-           align-items: center;
-       }
-
-       .creator-info h3 {
-           margin-bottom: 10px;
-       }
-
-       .contact-info {
-           text-align: right;
-       }
-
-       .contact-item {
-           margin-bottom: 10px;
-           font-size: 1rem;
-       }
-
-       /* Countdown Timer */
-       .countdown-timer {
-           background: linear-gradient(45deg, #e74c3c, #c0392b);
-           color: white;
-           padding: 30px;
-           border-radius: 15px;
-           text-align: center;
-           margin: 30px 0;
-           box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
-       }
-
-       .countdown-content h3 {
-           font-size: 1.5rem;
-           margin-bottom: 20px;
-       }
-
-       .countdown-display {
-           display: flex;
-           justify-content: center;
-           gap: 30px;
-       }
-
-       .time-unit {
-           text-align: center;
-       }
-
-       .time-number {
-           display: block;
-           font-size: 2.5rem;
-           font-weight: bold;
-           background: rgba(255, 255, 255, 0.2);
-           padding: 15px 20px;
-           border-radius: 10px;
-           margin-bottom: 5px;
-       }
-
-       .time-label {
-           font-size: 0.9rem;
-           opacity: 0.8;
-       }
-
-       /* Scroll to Top */
-       .scroll-to-top {
-           position: fixed;
-           bottom: 30px;
-           right: 30px;
-           width: 50px;
-           height: 50px;
-           background: linear-gradient(45deg, #667eea, #764ba2);
-           color: white;
-           border: none;
-           border-radius: 50%;
-           cursor: pointer;
-           opacity: 0;
-           visibility: hidden;
-           transition: all 0.3s ease;
-           z-index: 1000;
-           box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-       }
-
-       /* Responsive Design */
-       @media (max-width: 768px) {
-           .hero-content {
-               grid-template-columns: 1fr;
-               gap: 40px;
-               text-align: center;
-           }
-           
-           .hero-title {
-               font-size: 2.5rem;
-           }
-           
-           .authority-profile {
-               grid-template-columns: 1fr;
-               text-align: center;
-           }
-           
-           .guarantee-content {
-               grid-template-columns: 1fr;
-               text-align: center;
-           }
-           
-           .footer-content {
-               grid-template-columns: 1fr;
-               text-align: center;
-               gap: 20px;
-           }
-           
-           .contact-info {
-               text-align: center;
-           }
-           
-           .section-title {
-               font-size: 2rem;
-           }
-           
-           .benefits-grid,
-           .solution-grid,
-           .includes-grid {
-               grid-template-columns: 1fr;
-           }
-           
-           .current-price {
-               font-size: 3rem;
-           }
-
-           .countdown-display {
-               gap: 15px;
-           }
-           
-           .time-number {
-               font-size: 2rem;
-               padding: 10px 15px;
-           }
-       }
-
-       @media (max-width: 480px) {
-           .hero-title {
-               font-size: 2rem;
-           }
-           
-           .hero-subtitle {
-               font-size: 1.2rem;
-           }
-           
-           .cta-button {
-               padding: 15px 30px;
-               font-size: 1rem;
-           }
-           
-           .cta-button.large {
-               padding: 18px 35px;
-               font-size: 1.1rem;
-           }
-           
-           .section-title {
-               font-size: 1.8rem;
-           }
-           
-           .current-price {
-               font-size: 2.5rem;
-           }
-       }
-
-       /* Animations */
-       @keyframes fadeInUp {
-           from {
-               opacity: 0;
-               transform: translateY(30px);
-           }
-           to {
-               opacity: 1;
-               transform: translateY(0);
-           }
-       }
-
-       .hero-content > * {
-           animation: fadeInUp 0.8s ease-out;
-       }
-
-       .hero-text > *:nth-child(1) { animation-delay: 0.1s; }
-       .hero-text > *:nth-child(2) { animation-delay: 0.2s; }
-       .hero-text > *:nth-child(3) { animation-delay: 0.3s; }
-       .hero-text > *:nth-child(4) { animation-delay: 0.4s; }
-       .hero-text > *:nth-child(5) { animation-delay: 0.5s; }
-
-       /* Smooth scrolling */
-       html {
-           scroll-behavior: smooth;
-       }
-     /* Audio Player Styles */
-.audio-section {
-    background: rgba(255, 255, 255, 0.1);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durma em 8 Minutos - Método Científico por R$ 19,90</title>
+  <meta name="description" content="Acabe com a insônia hoje mesmo. Método científico comprovado por apenas R$ 19,90.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Inter', sans-serif;
+          line-height: 1.6;
+          color: #2c3e50;
+          background-color: #f8fafc;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+
+      /* Hero Section - Simplificada */
+      .hero {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 60px 0;
+          text-align: center;
+      }
+
+      .hero-title {
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
+          line-height: 1.1;
+      }
+
+      .highlight {
+          background: linear-gradient(45deg, #ffd700, #ffed4e);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+      }
+
+      .hero-subtitle {
+          font-size: 1.4rem;
+          margin-bottom: 2rem;
+          font-weight: 500;
+      }
+
+      .hero-image {
+          margin: 2rem 0;
+      }
+
+      .hero-main-image {
+          max-width: 400px;
+          width: 100%;
+          border-radius: 15px;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Preço Hero */
+      .price-hero {
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 15px;
+          margin: 2rem auto;
+          max-width: 300px;
+          backdrop-filter: blur(10px);
+      }
+
+      .price-large {
+          font-size: 3rem;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+      }
+
+      .price-currency {
+          font-size: 1.8rem;
+          margin-right: 5px;
+      }
+
+      .price-small {
+          font-size: 1.1rem;
+          opacity: 0.9;
+      }
+
+      /* CTA Button */
+      .cta-button {
+          background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+          color: white;
+          border: none;
+          padding: 20px 40px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          display: inline-flex;
+          align-items: center;
+          margin-top: 1.5rem;
+      }
+
+      .cta-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(238, 90, 36, 0.5);
+      }
+
+      .cta-button i {
+          margin-right: 10px;
+      }
+
+      /* Section Styles */
+      section {
+          padding: 60px 0;
+      }
+
+      .section-title {
+          font-size: 2.2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+          color: #2c3e50;
+          font-weight: 700;
+      }
+
+      /* Problem Section - Simplificada */
+      .problem-section {
+          background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+          text-align: center;
+      }
+
+      .problem-intro {
+          font-size: 1.3rem;
+          margin-bottom: 2rem;
+          font-weight: 600;
+          color: #2c3e50;
+      }
+
+      .problem-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          max-width: 700px;
+          margin: 0 auto;
+      }
+
+      .problem-item {
+          background: rgba(255, 255, 255, 0.3);
+          padding: 20px;
+          border-radius: 15px;
+          backdrop-filter: blur(10px);
+      }
+
+      .problem-item i {
+          font-size: 2rem;
+          color: #e74c3c;
+          margin-bottom: 10px;
+      }
+
+      /* Solution Section - Simplificada */
+      .solution-section {
+          background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+          text-align: center;
+      }
+
+      .solution-content {
+          max-width: 600px;
+          margin: 0 auto;
+      }
+
+      .solution-text {
+          font-size: 1.3rem;
+          margin-bottom: 2rem;
+          color: #2c3e50;
+          font-weight: 500;
+          line-height: 1.6;
+      }
+
+      .solution-features {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 30px;
+          margin-top: 2rem;
+      }
+
+      .feature-item {
+          background: white;
+          padding: 25px;
+          border-radius: 15px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-item i {
+          font-size: 2.5rem;
+          color: #667eea;
+          margin-bottom: 15px;
+      }
+
+      .feature-item h3 {
+          font-size: 1.1rem;
+          color: #2c3e50;
+          margin-bottom: 10px;
+      }
+
+      /* Proof Section - Simplificada */
+      .proof-section {
+          background: #f8f9fa;
+          text-align: center;
+      }
+
+      .testimonial {
+          background: white;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          max-width: 600px;
+          margin: 0 auto 2rem;
+      }
+
+      .testimonial-text {
+          font-size: 1.1rem;
+          font-style: italic;
+          margin-bottom: 15px;
+          color: #555;
+      }
+
+      .testimonial-author {
+          font-weight: 600;
+          color: #2c3e50;
+      }
+
+      .science-note {
+          font-size: 1rem;
+          color: #666;
+          margin-top: 1rem;
+      }
+
+      /* Guarantee Section - Simplificada */
+      .guarantee-section {
+          background: linear-gradient(135deg, #d1f2eb 0%, #a8e6cf 100%);
+          text-align: center;
+      }
+
+      .guarantee-content {
+          max-width: 500px;
+          margin: 0 auto;
+      }
+
+      .guarantee-seal {
+          max-width: 120px;
+          margin-bottom: 20px;
+      }
+
+      .guarantee-text {
+          font-size: 1.2rem;
+          color: #2c3e50;
+          font-weight: 600;
+          margin-bottom: 1rem;
+      }
+
+      .guarantee-note {
+          font-size: 1rem;
+          color: #27ae60;
+          font-weight: 500;
+      }
+
+      /* Final CTA Section */
+      .final-cta-section {
+          background: linear-gradient(45deg, #2c3e50, #34495e);
+          color: white;
+          text-align: center;
+      }
+
+      .urgency-text {
+          font-size: 1.4rem;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+      }
+
+      .price-final {
+          background: rgba(255, 255, 255, 0.1);
+          padding: 25px;
+          border-radius: 15px;
+          margin: 2rem auto;
+          max-width: 350px;
+          backdrop-filter: blur(10px);
+      }
+
+      /* Footer Simplificado */
+      .footer {
+          background: #2c3e50;
+          color: white;
+          padding: 30px 0;
+          text-align: center;
+      }
+
+      .footer p {
+          margin-bottom: 5px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+          .hero-title {
+              font-size: 2.2rem;
+          }
+          
+          .hero-subtitle {
+              font-size: 1.2rem;
+          }
+          
+          .section-title {
+              font-size: 1.8rem;
+          }
+          
+          .problem-list {
+              grid-template-columns: 1fr;
+          }
+          
+          .solution-features {
+              grid-template-columns: 1fr;
+          }
+          
+          .price-large {
+              font-size: 2.5rem;
+          }
+          
+          .cta-button {
+              padding: 18px 35px;
+              font-size: 1.1rem;
+          }
+      }
+
+      /* Scroll suave */
+      html {
+          scroll-behavior: smooth;
+      }
+    .testimonial-google {
+    background: white;
     padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.audio-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.audio-header i {
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: #ffd700;
-}
-
-.audio-header strong {
-    margin-right: 8px;
-}
-
-.audio-header span {
-    opacity: 0.9;
-}
-
-.audio-player {
-    margin: 15px 0;
-}
-
-.audio-player audio {
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 10px;
-}
-
-.audio-player audio::-webkit-media-controls-panel {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-}
-
-.audio-player audio::-webkit-media-controls-play-button {
-    background-color: #ffd700;
-    border-radius: 50%;
-}
-
-.audio-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.audio-info div {
-    display: flex;
-    align-items: center;
-}
-
-.audio-info i {
-    margin-right: 5px;
-    font-size: 0.8rem;
-}
-
-.audio-description {
-    font-size: 0.95rem;
-    opacity: 0.9;
-    margin: 15px 0 0 0;
-    line-height: 1.4;
-}
-
-/* Responsive audio player */
-@media (max-width: 480px) {
-    .audio-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .audio-header span {
-        margin-top: 5px;
-    }
-    
-    .audio-info {
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-.hero-main-image {
-    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
     max-width: 500px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
 }
 
-.hero-main-image:hover {
-    transform: scale(1.02);
+.stars {
+    display: flex;
+    margin-bottom: 12px;
 }
 
-@media (max-width: 768px) {
-    .hero-main-image {
-        max-width: 100%;
-        margin-top: 20px;
-    }
+.stars i {
+    color: #fbbc04;
+    font-size: 16px;
+    margin-right: 2px;
 }
-     .profile-photo {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    object-fit: cover;
+
+.testimonial-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3c4043;
+    margin-bottom: 16px;
+    font-style: normal;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    background: #1a73e8;
+    color: white;
     border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 12px;
 }
 
-.profile-photo:hover {
-    transform: scale(1.05);
+.author-info {
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 768px) {
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
+.author-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c4043;
+    margin-bottom: 2px;
+}
+
+.author-details {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+/* Versão mobile */
+@media (max-width: 480px) {
+    .testimonial-google {
+        padding: 20px;
+        margin: 0 10px;
     }
 }
- .guarantee-seal {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-    transition: transform 0.3s ease;
-}
-
-.guarantee-seal:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-@media (max-width: 768px) {
-    .guarantee-seal {
-        max-width: 150px;
-    }
-}
-     .app-screenshot {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.app-screenshot:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .app-screenshot {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-}
-   </style>
+  </style>
 </head>
+
 <body>
-   <!-- Header/Hero Section -->
-   <header class="hero">
-       <div class="container">
-           <div class="hero-content">
-               <div class="hero-text">
-                   <h1 class="hero-title">
-                       Durma Profundo em Apenas 
-                       <span class="highlight">8 Minutos</span>
-                   </h1>
-                   <p class="hero-subtitle">
-                       O Método Científico que Está Transformando o Sono de Milhares de Pessoas
-                   </p>
-                   <p class="hero-description">
-                       Descubra o protocolo revolucionário de hipnoterapia combinado com as posições cientificamente comprovadas para adormecer rapidamente e ter um sono reparador toda noite.
-                   </p>
-                   
-                   <!-- Audio Player -->
-<div class="audio-section">
-    <div class="audio-header">
-        <i class="fas fa-headphones"></i>
-        <strong>🎧 ÁUDIO EXPLICATIVO</strong>
-        <span>- Explicação completa do método</span>
+  <!-- Hero Section Simplificada -->
+  <section class="hero">
+      <div class="container">
+          <h1 class="hero-title">
+              Durma em Apenas <span class="highlight">8 Minutos</span>
+          </h1>
+          <p class="hero-subtitle">
+              Acabe com a insônia hoje mesmo usando o método científico mais simples que existe
+          </p>
+          
+          <div class="hero-image">
+              <img src="https://appestoicismo.github.io/insonia/dormindo3.jpg" 
+                   alt="Pessoa dormindo pacificamente" 
+                   class="hero-main-image">
+          </div>
+          
+          <div class="price-hero">
+              <div class="price-large">
+                  <span class="price-currency">R$</span>
+                  <span>19</span>
+                  <span>,90</span>
+              </div>
+              <p class="price-small">Acesso imediato após a compra</p>
+          </div>
+          
+          <button class="cta-button">
+              <i class="fas fa-moon"></i>
+              QUERO DORMIR HOJE MESMO
+          </button>
+      </div>
+  </section>
+
+  <!-- Problem Section Simplificada -->
+  <section class="problem-section">
+      <div class="container">
+          <h2 class="section-title">Você está cansado disso?</h2>
+          
+          <p class="problem-intro">
+              Se você demora mais de 30 minutos para dormir toda noite, isso precisa parar AGORA.
+          </p>
+          
+          <div class="problem-list">
+              <div class="problem-item">
+                  <i class="fas fa-clock"></i>
+                  <h3>Rolar na cama por horas sem conseguir dormir</h3>
+              </div>
+              
+              <div class="problem-item">
+                  <i class="fas fa-tired"></i>
+                  <h3>Acordar mais cansado do que quando foi deitar</h3>
+              </div>
+              
+              <div class="problem-item">
+                  <i class="fas fa-head-side-virus"></i>
+                  <h3>Dores no pescoço e nas costas toda manhã</h3>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Solution Section Simplificada -->
+  <section class="solution-section">
+      <div class="container">
+          <h2 class="section-title">A Solução É Mais Simples Do Que Você Imagina</h2>
+          
+          <div class="solution-content">
+              <p class="solution-text">
+                  Áudio de relaxamento + posições para dormir indicadas por especialistas = sono profundo toda noite.
+              </p>
+              <p class="solution-text">
+                  Sem remédios. Sem complicação. Apenas resultados.
+              </p>
+              
+              <div class="solution-features">
+                  <div class="feature-item">
+                      <i class="fas fa-headphones"></i>
+                      <h3>Áudio de Relaxamento</h3>
+                      <p>8 minutos que mudam sua noite</p>
+                  </div>
+                  
+                  <div class="feature-item">
+                      <i class="fas fa-bed"></i>
+                      <h3>Posições Científicas</h3>
+                      <p>Baseado em pesquisas médicas</p>
+                  </div>
+                  
+                  <div class="feature-item">
+                      <i class="fas fa-mobile-alt"></i>
+                      <h3>No Seu Celular</h3>
+                      <p>Use quando e onde quiser</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Proof Section Simplificada -->
+  <section class="proof-section">
+      <div class="container">
+          <h2 class="section-title">Funciona de Verdade</h2>
+          
+          <div class="testimonial-google">
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
     </div>
-    
-    <div class="audio-player">
-        <audio controls preload="metadata" id="explanatoryAudio">
-            <source src="audio/explicacao-metodo-sono.mp3" type="audio/mpeg">
-            <source src="audio/explicacao-metodo-sono.ogg" type="audio/ogg">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
-        
-        <div class="audio-info">
-            <div class="audio-duration">
-                <i class="fas fa-clock"></i>
-                <span>Duração: 12 minutos</span>
-            </div>
-            <div class="audio-quality">
-                <i class="fas fa-volume-up"></i>
-                <span>Alta qualidade</span>
-            </div>
+    <p class="testimonial-text">
+        "Pela primeira vez em meses consegui dormir rapidamente. O áudio realmente funciona!"
+    </p>
+    <div class="testimonial-author">
+        <div class="author-avatar">M</div>
+        <div class="author-info">
+            <span class="author-name">Fatima Soares de Almeida/MG.</span>
+            <span class="author-details">34 anos • há 2 dias</span>
         </div>
     </div>
-    
-    <p class="audio-description">
-        Escute uma explicação detalhada sobre como o protocolo funciona e os benefícios cientificamente comprovados.
-    </p>
 </div>
-                   
-                   <div class="cta-section">
-                       <button class="cta-button primary">
-                           <i class="fas fa-moon"></i>
-                           QUERO DORMIR PROFUNDO HOJE MESMO
-                       </button>
-                       <p class="cta-note">Botão Kwify - Placeholder a ser configurado</p>
-                   </div>
-               </div>
-               
-               <div class="hero-image">
-    <img src="https://appestoicismo.github.io/insonia/dormindo3.jpg" 
-         alt="Pessoa dormindo pacificamente" 
-         class="hero-main-image">
-</div>
-               </div>
-           </div>
-       </div>
-   </header>
+          
+          <p class="science-note">
+              Baseado em pesquisas da Mayo Clinic sobre posições para dormir e técnicas de relaxamento profundo.
+          </p>
+      </div>
+  </section>
 
-   <!-- Problem Section -->
-   <section class="problem-section">
-       <div class="container">
-           <h2 class="section-title">Você Está Cansado de...</h2>
-           
-           <div class="problem-grid">
-               <div class="problem-item">
-                   <i class="fas fa-clock"></i>
-                   <h3>Passar horas rolando na cama sem conseguir adormecer?</h3>
-               </div>
-           </div>
-           
-           <div class="problem-content">
-               <p class="problem-intro">
-                   Milhões de brasileiros sofrem com insônia e dificuldades para dormir. Se você é uma dessas pessoas que:
-               </p>
-               
-               <div class="problem-list">
-                   <div class="problem-point">
-                       <i class="fas fa-times-circle"></i>
-                       <span>Demora mais de 30 minutos para adormecer</span>
-                   </div>
-                   <div class="problem-point">
-                       <i class="fas fa-times-circle"></i>
-                       <span>Acorda várias vezes durante a noite</span>
-                   </div>
-                   <div class="problem-point">
-                       <i class="fas fa-times-circle"></i>
-                       <span>Sente dores no pescoço e nas costas pela manhã</span>
-                   </div>
-                   <div class="problem-point">
-                       <i class="fas fa-times-circle"></i>
-                       <span>Vive cansado mesmo depois de "dormir" 8 horas</span>
-                   </div>
-                   <div class="problem-point">
-                       <i class="fas fa-times-circle"></i>
-                       <span>Já tentou de tudo: chás, remédios, técnicas de respiração...</span>
-                   </div>
-               </div>
-               
-               <div class="problem-conclusion">
-                   <p><strong>Então você precisa conhecer a verdade sobre o sono que os médicos não te contam.</strong></p>
-               </div>
-           </div>
-       </div>
-   </section>
+  <!-- Guarantee Section Simplificada -->
+  <section class="guarantee-section">
+      <div class="container">
+          <div class="guarantee-content">
+              <img src="https://appestoicismo.github.io/insonia/garantia.png" 
+                   alt="Garantia 7 dias" 
+                   class="guarantee-seal">
+              
+              <p class="guarantee-text">
+                  Garantia de 7 dias ou seu dinheiro de volta
+              </p>
+              <p class="guarantee-note">
+                  Se não funcionar, devolvemos 100% do valor
+              </p>
+          </div>
+      </div>
+  </section>
 
-   <!-- Solution Section -->
-   <section class="solution-section">
-       <div class="container">
-           <h2 class="section-title">A Descoberta que Mudou Tudo</h2>
-           
-           <div class="solution-intro">
-               <p>Após anos de pesquisa com pacientes que sofriam de insônia crônica, o Hipnoterapeuta <strong>Alex Andreoli Dantas</strong> desenvolveu um protocolo revolucionário que combina:</p>
-           </div>
-           
-           <div class="solution-grid">
-               <div class="solution-item">
-                   <div class="solution-icon">
-                       <i class="fas fa-brain"></i>
-                   </div>
-                   <h3>🧠 Hipnoterapia Científica</h3>
-                   <p>Um áudio especialmente desenvolvido que guia sua mente para o estado ideal de relaxamento profundo em apenas 8 minutos.</p>
-               </div>
-               
-               <div class="solution-item">
-                   <div class="solution-icon">
-                       <i class="fas fa-bed"></i>
-                   </div>
-                   <h3>🛏️ Posições Estratégicas para Dormir</h3>
-                   <p>O guia completo baseado em pesquisas da Mayo Clinic, HCor e principais instituições médicas mundiais sobre as posições que realmente funcionam.</p>
-               </div>
-               
-               <div class="solution-item">
-                   <div class="solution-icon">
-                       <i class="fas fa-mobile-alt"></i>
-                   </div>
-                   <h3>📱 Tudo em um Aplicativo Prático</h3>
-                   <p>Acesso fácil e rápido direto do seu celular, para usar quando e onde precisar.</p>
-               </div>
-           </div>
-       </div>
-   </section>
+  <!-- Final CTA -->
+  <section class="final-cta-section">
+      <div class="container">
+          <p class="urgency-text">
+              Cada noite mal dormida é mais uma noite perdida da sua vida
+          </p>
+          
+          <div class="price-final">
+              <div class="price-large">
+                  <span class="price-currency">R$</span>
+                  <span>19</span>
+                  <span>,90</span>
+              </div>
+              <p class="price-small">Pague uma vez, durma bem para sempre</p>
+          </div>
+          
+          <button class="cta-button">
+              <i class="fas fa-check-circle"></i>
+              SIM, QUERO DORMIR BEM HOJE
+          </button>
+      </div>
+  </section>
 
-   <!-- Benefits Section -->
-   <section class="benefits-section">
-       <div class="container">
-           <h2 class="section-title">O Que Você Vai Conquistar:</h2>
-           
-           <div class="benefits-grid">
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-bolt"></i>
-                   </div>
-                   <h3>⚡ Adormecer em 8 Minutos ou Menos</h3>
-                   <p>Não mais horas perdidas rolando na cama. Com o protocolo de hipnoterapia, sua mente será conduzida ao estado de sono profundo rapidamente.</p>
-               </div>
-               
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-moon"></i>
-                   </div>
-                   <h3>🌙 Sono Reparador Toda Noite</h3>
-                   <p>Acorde descansado, com energia e disposição para enfrentar o dia. Seu corpo finalmente terá o descanso que merece.</p>
-               </div>
-               
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-dumbbell"></i>
-                   </div>
-                   <h3>💪 Eliminar Dores nas Costas e Pescoço</h3>
-                   <p>As posições cientificamente comprovadas vão aliviar a pressão na sua coluna e articulações.</p>
-               </div>
-               
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-leaf"></i>
-                   </div>
-                   <h3>🧘 Reduzir Ansiedade e Estresse</h3>
-                   <p>A hipnoterapia não apenas te faz dormir, mas também acalma sua mente ansiosa.</p>
-               </div>
-               
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-heart"></i>
-                   </div>
-                   <h3>❤️ Melhorar sua Saúde Cardiovascular</h3>
-                   <p>Dormir na posição correta melhora a circulação sanguínea e reduz problemas cardíacos.</p>
-               </div>
-               
-               <div class="benefit-item">
-                   <div class="benefit-icon">
-                       <i class="fas fa-fire"></i>
-                   </div>
-                   <h3>🔥 Acabar com o Ronco</h3>
-                   <p>As técnicas de posicionamento mantêm suas vias aéreas desobstruídas.</p>
-               </div>
-           </div>
-       </div>
-   </section>
+  <!-- Footer Simplificado -->
+  <footer class="footer">
+      <div class="container">
+          <p><strong>Hipnoterapeuta Alex Andreoli Dantas</strong></p>
+          <p>CNPJ: 40.678.175/0001-77 | Contato WhatsApp: (19)974010028</p>
+      </div>
+  </footer>
 
-   <!-- Authority Section -->
-   <section class="authority-section">
-       <div class="container">
-           <h2 class="section-title">Desenvolvido por um Especialista Reconhecido</h2>
-           
-           <div class="authority-content">
-               <div class="authority-profile">
-                   <div class="profile-image">
-    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" 
-         alt="Hipnoterapeuta Alex Andreoli Dantas" 
-         class="profile-photo">
-</div>
-                   </div>
-                   <div class="profile-info">
-                       <h3>Hipnoterapeuta Alex Andreoli Dantas</h3>
-                       <ul class="credentials">
-                           <li><i class="fas fa-check"></i> Especialista em Hipnoterapia Clínica</li>
-                           <li><i class="fas fa-check"></i> Mais de [X] anos de experiência</li>
-                           <li><i class="fas fa-check"></i> Já ajudou mais de [X] pessoas a superar problemas de sono</li>
-                           <li><i class="fas fa-check"></i> Protocolo baseado em pesquisas científicas das principais instituições médicas</li>
-                       </ul>
-                   </div>
-               </div>
-               
-               <div class="science-backing">
-                   <h3>Baseado em Ciência Comprovada</h3>
-                   <p>Este método não é "mais uma técnica alternativa". É fundamentado em pesquisas de:</p>
-                   <div class="institutions">
-                       <div class="institution">
-                           <i class="fas fa-hospital"></i>
-                           <strong>Mayo Clinic</strong>
-                           <span>(Dr. Lois Krahn e Dr. Virend Somers)</span>
-                       </div>
-                       <div class="institution">
-                           <i class="fas fa-hospital"></i>
-                           <strong>Hospital do Coração (HCor)</strong>
-                           <span>(Dr. Raphael Marcon)</span>
-                       </div>
-                       <div class="institution">
-                           <i class="fas fa-hospital"></i>
-                           <strong>Portal Drauzio Varella</strong>
-                           <span>(Dr. Bruno Zampaulo)</span>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Product Includes Section -->
-   <section class="includes-section">
-       <div class="container">
-           <h2 class="section-title">Tudo Que Você Recebe:</h2>
-           
-           <div class="includes-grid">
-               <div class="include-item">
-                   <div class="include-icon">
-                       <i class="fas fa-book"></i>
-                   </div>
-                   <h3>📖 E-book: Guia Completo das Posições para Dormir</h3>
-                   <ul>
-                       <li>31 páginas de conteúdo científico</li>
-                       <li>Análise detalhada de cada posição</li>
-                       <li>Recomendações específicas para diferentes condições de saúde</li>
-                       <li>Dicas práticas sobre travesseiros e colchões</li>
-                       <li>Posições especiais para casais e gestantes</li>
-                   </ul>
-               </div>
-               
-               <div class="include-item">
-                   <div class="include-icon">
-                       <i class="fas fa-headphones"></i>
-                   </div>
-                   <h3>🎧 Protocolo de Hipnoterapia em Áudio</h3>
-                   <ul>
-                       <li>Sessão profissional de hipnoterapia</li>
-                       <li>Técnicas de relaxamento profundo</li>
-                       <li>Indução ao sono em 8 minutos</li>
-                       <li>Narração especializada do Hipnoterapeuta Alex Andreoli</li>
-                   </ul>
-               </div>
-               
-               <div class="include-item">
-                   <div class="include-icon">
-                       <i class="fas fa-mobile-alt"></i>
-                   </div>
-                   <h3>📱 Aplicativo Exclusivo</h3>
-                   <ul>
-                       <li>Fácil instalação no seu celular</li>
-                       <li>Interface intuitiva e amigável</li>
-                       <li>Acesso offline ao conteúdo</li>
-                       <li>Disponível para Android e iOS</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="product-preview">
-               <div class="product-preview">
-    <img src="https://appestoicismo.github.io/insonia/appinterruptor.png" 
-         alt="Screenshot do aplicativo de hipnoterapia" 
-         class="app-screenshot">
-</div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Urgency Section -->
-   <section class="urgency-section">
-       <div class="container">
-           <div class="urgency-content">
-               <h2>⚠️ Oferta Por Tempo Limitado</h2>
-               <p>Este protocolo revolucionário está sendo oferecido por um preço especial apenas para os primeiros 100 pessoas que se inscreverem hoje.</p>
-               <p class="urgency-warning"><strong>Depois disso, o valor volta ao preço normal de R$ 297,00</strong></p>
-           </div>
-       </div>
-   </section>
-
-   <!-- Guarantee Section -->
-   <section class="guarantee-section">
-       <div class="container">
-           <div class="guarantee-content">
-               <div class="guarantee-badge">
-    <img src="https://appestoicismo.github.io/insonia/garantia.png" 
-         alt="Selo de Garantia 30 dias" 
-         class="guarantee-seal">
-</div>
-               </div>
-               <div class="guarantee-text">
-                   <h2>🛡️ Garantia Incondicional de 30 Dias</h2>
-                   <p>Estamos tão confiantes nos resultados que oferecemos uma garantia total:</p>
-                   <p class="guarantee-promise">
-                       <strong>Se em 30 dias você não conseguir adormecer mais rápido e ter um sono mais reparador, devolvemos 100% do seu dinheiro.</strong>
-                   </p>
-                   <p class="guarantee-terms">Sem perguntas. Sem complicações. Sem letras miúdas.</p>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Pricing Section -->
-   <section class="pricing-section">
-       <div class="container">
-           <h2 class="section-title">Investimento Que Transforma Sua Vida</h2>
-           
-           <div class="pricing-card">
-               <div class="price-comparison">
-                   <span class="old-price">De R$ 297,00</span>
-                   <span class="price-label">por apenas:</span>
-               </div>
-               
-               <div class="current-price">
-                   <span class="price-currency">R$</span>
-                   <span class="price-amount">97</span>
-                   <span class="price-cents">,00</span>
-               </div>
-               
-               <p class="payment-options">À vista no PIX ou cartão</p>
-               <p class="installments">Ou 3x de R$ 32,33 sem juros</p>
-               
-               <button class="cta-button primary large">
-                   <i class="fas fa-lock"></i>
-                   GARANTIR MINHA VAGA AGORA
-               </button>
-               <p class="cta-note">Botão Kwify - Placeholder a ser configurado</p>
-           </div>
-       </div>
-   </section>
-
-   <!-- FAQ Section -->
-   <section class="faq-section">
-       <div class="container">
-           <h2 class="section-title">Perguntas Frequentes</h2>
-           
-           <div class="faq-list">
-               <div class="faq-item">
-                   <div class="faq-question">
-                       <h3>P: O método realmente funciona em 8 minutos?</h3>
-                       <i class="fas fa-chevron-down"></i>
-                   </div>
-                   <div class="faq-answer">
-                       <p>R: Sim! O protocolo de hipnoterapia foi desenvolvido especificamente para induzir o relaxamento profundo em até 8 minutos. Milhares de pessoas já comprovaram a eficácia.</p>
-                   </div>
-               </div>
-               
-               <div class="faq-item">
-                   <div class="faq-question">
-                       <h3>P: Preciso de experiência com hipnose?</h3>
-                       <i class="fas fa-chevron-down"></i>
-                   </div>
-                   <div class="faq-answer">
-                       <p>R: Não! O áudio foi criado para iniciantes. Basta seguir as instruções simples e deixar sua mente ser guiada.</p>
-                   </div>
-               </div>
-               
-               <div class="faq-item">
-                   <div class="faq-question">
-                       <h3>P: Funciona para insônia crônica?</h3>
-                       <i class="fas fa-chevron-down"></i>
-                   </div>
-                   <div class="faq-answer">
-                       <p>R: O método foi testado especialmente em pessoas com dificuldades severas para dormir, incluindo casos de insônia crônica.</p>
-                   </div>
-               </div>
-               
-               <div class="faq-item">
-                   <div class="faq-question">
-                       <h3>P: O aplicativo funciona offline?</h3>
-                       <i class="fas fa-chevron-down"></i>
-                   </div>
-                   <div class="faq-answer">
-                       <p>R: Sim! Após o download, você pode usar todo o conteúdo sem precisar de internet.</p>
-                   </div>
-               </div>
-               
-               <div class="faq-item">
-                   <div class="faq-question">
-                       <h3>P: Há contraindicações?</h3>
-                       <i class="fas fa-chevron-down"></i>
-                   </div>
-                   <div class="faq-answer">
-                       <p>R: O método é natural e seguro. Porém, se você tem alguma condição médica específica, consulte seu médico antes de usar.</p>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Final CTA Section -->
-   <section class="final-cta-section">
-       <div class="container">
-           <h2>Não Perca Mais Uma Noite de Sono</h2>
-           
-           <div class="final-cta-content">
-               <p>Cada noite mal dormida é:</p>
-               <ul class="consequences-list">
-                   <li><i class="fas fa-minus-circle"></i> Mais um dia de cansaço e irritabilidade</li>
-                   <li><i class="fas fa-minus-circle"></i> Mais estresse acumulado no seu corpo</li>
-                   <li><i class="fas fa-minus-circle"></i> Mais problemas de saúde se desenvolvendo</li>
-                   <li><i class="fas fa-minus-circle"></i> Mais qualidade de vida perdida</li>
-               </ul>
-               
-               <p class="final-message"><strong>A solução está aqui. Agora.</strong></p>
-               
-               <button class="cta-button primary large">
-                   <i class="fas fa-check-circle"></i>
-                   SIM, QUERO DORMIR PROFUNDO HOJE
-               </button>
-               <p class="cta-note">Botão Kwify - Placeholder a ser configurado</p>
-           </div>
-       </div>
-   </section>
-
-   <!-- Footer -->
-   <footer class="footer">
-       <div class="container">
-           <div class="footer-content">
-               <div class="creator-info">
-                   <h3>Criador do Protocolo:</h3>
-                   <p><strong>Hipnoterapeuta Alex Andreoli Dantas</strong></p>
-               </div>
-               
-               <div class="contact-info">
-                   <div class="contact-item">
-                       <strong>CNPJ:</strong> [Placeholder - a ser adicionado]
-                   </div>
-                   <div class="contact-item">
-                       <strong>E-mail:</strong> [Placeholder - a ser adicionado]
-                   </div>
-                   <div class="contact-item">
-                       <strong>WhatsApp:</strong> [Placeholder - a ser adicionado]
-                   </div>
-               </div>
-           </div>
-       </div>
-   </footer>
-
-   <script>
-       // DOM Content Loaded
-       document.addEventListener('DOMContentLoaded', function() {
-           
-           // FAQ Accordion Functionality
-           const faqItems = document.querySelectorAll('.faq-item');
-           
-           faqItems.forEach(item => {
-               const question = item.querySelector('.faq-question');
-               
-               question.addEventListener('click', () => {
-                   // Close all other FAQ items
-                   faqItems.forEach(otherItem => {
-                       if (otherItem !== item) {
-                           otherItem.classList.remove('active');
-                       }
-                   });
-                   
-                   // Toggle current item
-                   item.classList.toggle('active');
-               });
-           });
-           
-           // Smooth scrolling for anchor links
-           const anchorLinks = document.querySelectorAll('a[href^="#"]');
-           
-           anchorLinks.forEach(link => {
-               link.addEventListener('click', function(e) {
-                   e.preventDefault();
-                   
-                   const targetId = this.getAttribute('href');
-                   const targetSection = document.querySelector(targetId);
-                   
-                   if (targetSection) {
-                       targetSection.scrollIntoView({
-                           behavior: 'smooth'
-                       });
-                   }
-               });
-           });
-           
-           // CTA Button Click Tracking (placeholder for analytics)
-           const ctaButtons = document.querySelectorAll('.cta-button');
-           
-           ctaButtons.forEach(button => {
-               button.addEventListener('click', function() {
-                   // Placeholder for conversion tracking
-                   console.log('CTA Button clicked:', this.textContent.trim());
-                   
-                   // Here you would typically send data to analytics
-                   // gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Purchase Intent' });
-                   
-                   // Show alert for now (remove when Kwify integration is added)
-                   alert('Botão Kwify será integrado aqui. Redirecionamento para checkout em breve!');
-               });
-           });
-           
-                  
-           // Scroll animations
-           const observerOptions = {
-               threshold: 0.1,
-               rootMargin: '0px 0px -50px 0px'
-           };
-           
-           const observer = new IntersectionObserver(function(entries) {
-               entries.forEach(entry => {
-                   if (entry.isIntersecting) {
-                       entry.target.style.opacity = '1';
-                       entry.target.style.transform = 'translateY(0)';
-                   }
-               });
-           }, observerOptions);
-           
-           // Observe elements for scroll animations
-           const animatedElements = document.querySelectorAll('.solution-item, .benefit-item, .include-item');
-           
-           animatedElements.forEach(el => {
-               el.style.opacity = '0';
-               el.style.transform = 'translateY(30px)';
-               el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-               observer.observe(el);
-           });
-           
-           // Countdown timer (placeholder for urgency)
-           function createCountdown() {
-               const countdownElement = document.createElement('div');
-               countdownElement.className = 'countdown-timer';
-               countdownElement.innerHTML = `
-                   <div class="countdown-content">
-                       <h3>⏰ Oferta expira em:</h3>
-                       <div class="countdown-display">
-                           <div class="time-unit">
-                               <span class="time-number" id="hours">23</span>
-                               <span class="time-label">Horas</span>
-                           </div>
-                           <div class="time-unit">
-                               <span class="time-number" id="minutes">59</span>
-                               <span class="time-label">Minutos</span>
-                           </div>
-                           <div class="time-unit">
-                               <span class="time-number" id="seconds">59</span>
-                               <span class="time-label">Segundos</span>
-                           </div>
-                       </div>
-                   </div>
-               `;
-               
-               // Insert countdown after urgency section
-               const urgencySection = document.querySelector('.urgency-section .container');
-               if (urgencySection) {
-                   urgencySection.appendChild(countdownElement);
-               }
-               
-               // Start countdown
-               startCountdown();
-           }
-           
-           function startCountdown() {
-               // Set countdown to 24 hours from now
-               const endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-               
-               const timer = setInterval(function() {
-                   const now = new Date().getTime();
-                   const distance = endTime - now;
-                   
-                   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                   
-                   const hoursEl = document.getElementById('hours');
-                   const minutesEl = document.getElementById('minutes');
-                   const secondsEl = document.getElementById('seconds');
-                   
-                   if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
-                   if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
-                   if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
-                   
-                   if (distance < 0) {
-                       clearInterval(timer);
-                       // Reset countdown
-                       setTimeout(createCountdown, 1000);
-                   }
-               }, 1000);
-           }
-           
-           // Initialize countdown
-           createCountdown();
-           
-           // Form validation (if forms are added later)
-           function validateEmail(email) {
-               const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-               return re.test(email);
-           }
-           
-           // Mobile menu toggle (if navigation is added)
-           function toggleMobileMenu() {
-               const mobileMenu = document.querySelector('.mobile-menu');
-               if (mobileMenu) {
-                   mobileMenu.classList.toggle('active');
-               }
-           }
-           
-           // Lazy loading for images (when real images are added)
-           function lazyLoadImages() {
-               const images = document.querySelectorAll('img[data-src]');
-               
-               const imageObserver = new IntersectionObserver((entries, observer) => {
-                   entries.forEach(entry => {
-                       if (entry.isIntersecting) {
-                           const img = entry.target;
-                           img.src = img.dataset.src;
-                           img.classList.remove('lazy');
-                           imageObserver.unobserve(img);
-                       }
-                   });
-               });
-               
-               images.forEach(img => imageObserver.observe(img));
-           }
-           
-           // Initialize lazy loading
-           lazyLoadImages();
-           
-           // Performance optimization: Debounce scroll events
-           function debounce(func, wait) {
-               let timeout;
-               return function executedFunction(...args) {
-                   const later = () => {
-                       clearTimeout(timeout);
-                       func(...args);
-                   };
-                   clearTimeout(timeout);
-                   timeout = setTimeout(later, wait);
-               };
-           }
-           
-           // Scroll to top functionality
-           function createScrollToTop() {
-               const scrollButton = document.createElement('button');
-               scrollButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-               scrollButton.className = 'scroll-to-top';
-               scrollButton.style.cssText = `
-                   position: fixed;
-                   bottom: 30px;
-                   right: 30px;
-                   width: 50px;
-                   height: 50px;
-                   background: linear-gradient(45deg, #667eea, #764ba2);
-                   color: white;
-                   border: none;
-                   border-radius: 50%;
-                   cursor: pointer;
-                   opacity: 0;
-                   visibility: hidden;
-                   transition: all 0.3s ease;
-                   z-index: 1000;
-                   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-               `;
-               
-               document.body.appendChild(scrollButton);
-               
-               // Show/hide scroll button
-               const toggleScrollButton = debounce(() => {
-                   if (window.pageYOffset > 300) {
-                       scrollButton.style.opacity = '1';
-                       scrollButton.style.visibility = 'visible';
-                   } else {
-                       scrollButton.style.opacity = '0';
-                       scrollButton.style.visibility = 'hidden';
-                   }
-               }, 100);
-               
-               window.addEventListener('scroll', toggleScrollButton);
-               
-               // Scroll to top functionality
-               scrollButton.addEventListener('click', () => {
-                   window.scrollTo({
-                       top: 0,
-                       behavior: 'smooth'
-                   });
-               });
-           }
-           
-           // Initialize scroll to top
-           createScrollToTop();
-           
-           // Analytics placeholder functions
-           window.trackEvent = function(category, action, label) {
-               console.log('Analytics Event:', { category, action, label });
-               // Integrate with Google Analytics, Facebook Pixel, etc.
-           };
-           
-           // Track page load
-           window.trackEvent('Page', 'Load', 'Landing Page');
-           
-           // Track scroll depth
-           let maxScroll = 0;
-           const trackScrollDepth = debounce(() => {
-               const scrollPercent = Math.round((window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100);
-               
-               if (scrollPercent > maxScroll) {
-                   maxScroll = scrollPercent;
-                   
-                   // Track milestone scrolls
-                   if (scrollPercent >= 25 && maxScroll < 25) {
-                       window.trackEvent('Scroll', 'Depth', '25%');
-                   } else if (scrollPercent >= 50 && maxScroll < 50) {
-                       window.trackEvent('Scroll', 'Depth', '50%');
-                   } else if (scrollPercent >= 75 && maxScroll < 75) {
-                       window.trackEvent('Scroll', 'Depth', '75%');
-                   } else if (scrollPercent >= 90 && maxScroll < 90) {
-                       window.trackEvent('Scroll', 'Depth', '90%');
-                   }
-               }
-           }, 500);
-           
-           window.addEventListener('scroll', trackScrollDepth);
-           
-           // Exit intent detection (desktop only)
-           if (!window.matchMedia('(max-width: 768px)').matches) {
-               let exitIntentShown = false;
-               
-               document.addEventListener('mouseleave', function(e) {
-                   if (e.clientY <= 0 && !exitIntentShown) {
-                       exitIntentShown = true;
-                       window.trackEvent('Exit Intent', 'Detected', 'Mouse Leave');
-                       
-                       // Show exit intent popup (placeholder)
-                       console.log('Exit intent detected - show special offer popup');
-                       // You could show a modal with a special discount here
-                   }
-               });
-           }
-           
-           console.log('Landing page JavaScript loaded successfully!');
-       });
-   </script>
+  <script>
+      // Funcionalidade básica dos botões CTA
+      document.querySelectorAll('.cta-button').forEach(button => {
+          button.addEventListener('click', function() {
+              // Integração com Kwify vai aqui
+              alert('Redirecionamento para checkout - Kwify será integrado aqui');
+              console.log('CTA clicado:', this.textContent.trim());
+          });
+      });
+  </script>
 </body>
 </html>
